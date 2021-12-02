@@ -44,7 +44,7 @@ int main(void)
     t = clock() - t;
      time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
     t1 = clock();
-    binary_search_recursive(array,0,size,4000);
+    binary_search_recursive(array,0,size,24);
     t1 = clock() - t1;
      time_taken_1 = ((double)t1)/CLOCKS_PER_SEC; // in seconds
 
@@ -74,7 +74,7 @@ void array_init(int *array, int size)
     int i;
     for(i = 0 ; i < size ; i++)
     {
-        array[i] = (i*2)+1;
+        array[i] = rand()%size;
     }
 
 }
